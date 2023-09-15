@@ -1,0 +1,134 @@
+#数据库配置
+mysql:
+  ip: localhost
+  databasename: xiaoluo
+  port: 3306
+  username: Herdeny
+  password: xinghun1314
+
+# 常规配置
+general:
+  # 机器人QQ号
+  qq: 1982391663
+  # 机器人密码
+  password: 'xinghun1314'
+  # 插件启用时自动登录
+  auto-login: true
+  # 登录协议，无法登录时可以尝试切换协议
+  # 手机QQ: ANDROID_PHONE
+  # 平板QQ: ANDROID_PAD
+  # 手表QQ: ANDROID_WATCH
+  # 输入的值无效时自动使用 ANDROID_PAD
+  protocol: 'ANDROID_WATCH'
+
+  # 是否自动通过好友申请
+  autoAcceptFriendAddRequest: true
+  # 可用于添加白名单的群号列表
+  groupList:
+    - 773735730
+    - 686974095
+  #可用于聊天互通的群
+  chatgroup: 773735730
+  #可以执行op指令的群【未实现】
+  opgroup: 686974095
+  # 允许的用户名正则表达式
+  nameRegex: '[a-zA-Z0-9_]{3,16}'
+  # 允许的密码正则表达式
+  passwordRegex: '[a-zA-Z0-9_]{5,30}'
+  # 是否允许更新白名单
+  if-allow-update: false
+  #关键词
+  prefixCommandKey: '申请白名单'
+  prefixCheckKey: '查询白名单'
+  prefixDeleteKey: '删除白名单'
+  prefixUpdateKey: '更新白名单'
+  prefixReloadKey: '重载白名单'
+# 消息
+messages:
+  prefix: '&7[&f白名单&7]&e'
+  logining: '&e正在登录机器人 $uid &7(详细结果请见控制台)'
+  loginfail: '&c登录机器人 $uid 失败! &a原因: &7$reason'
+  loginsuccess: '&a机器人 $uid 登录成功!'
+  logined: '&a机器人已经在线了! 无需重复登录'
+  destoryed: '&a机器人实例已销毁!'
+  reloaded: '&a插件重载完毕'
+  playernotexist: '&c玩家不存在'
+  chatformat: '&6『极光交流群』&7旅行者 &b%player% &7说：&r%message%'
+  noPermission: '你没有权限！'
+  bot:
+    invalidUsername: |- 
+      $name 不是一个有效的游戏ID
+      游戏ID只允许为3-16位大小写字母、数字、下划线的组合
+    getqq: 'ID：$user 的申请者QQ为：'
+    getid: 'QQ：$qq 申请的游戏ID为：'
+    nosuchUsername: 'ID：$user 暂未被申请'
+    nofindUsername: 'QQ：$qq 暂未申请白名单'
+    Nobinding: |-
+      您还暂未申请白名单
+      发送“申请白名单+游戏ID”以申请
+    addsuccess: '您成功为 $user 申请了白名单~祝您游戏愉快'
+    already: 'ID：$user 已经被申请啦，请换个试试吧'
+    addfail-banned: '$user 位于黑名单中！请换个试试吧'
+    sql_fail: '数据库操作失败，请联系管理员处理'
+    SignFail: |-
+      你今天在$time已经签到过啦，明天继续加油哦！
+      目前积分：$points
+    join: |-
+      欢迎新的旅行者来到极光之恋！
+      客户端可在群文件下载，请先阅读群公告哦~
+
+      【如何申请白名单】
+      在群内发送“申请白名单 你的游戏ID”
+      例如发送
+      申请白名单 xinghun1314
+      即可将xinghun1314添加到白名单中
+    member_leave: |-
+      ===『玩家退群提醒』====
+      QQ: $qq
+      ID: $id
+      启航时间：$start
+      ====『赞助详情』=====
+      本周目赞助：$sponsor_this RMB
+      总计赞助：$sponsor_total RMB
+      可领取补偿：$sponsor_return 点券
+      是否为svipp：$is_svipp
+      是否为ssvip：$is_ssvip
+      ===================
+    sponsor: |-
+      ===『旅行者档案』====
+      QQ: $qq
+      ID: $id
+      在线状态：$online
+      启航时间：$start
+      ====『赞助详情』=====
+      本周目赞助：$sponsor_this RMB
+      总计赞助：$sponsor_total RMB
+      可领取补偿：$sponsor_return 点券
+      是否为svipp：$is_svipp
+      是否为ssvip：$is_ssvip
+      ===================
+      极光小落代表服务器感谢您的陪伴与支持~
+  whitelist:
+    # 不在白名单内的人加入服务器时的提示信息
+    kick: |-
+      &a你的ID: &r$user &a不在白名单内
+
+      &e[如何获取白名单]
+      &6请在极光之恋QQ群内发送
+
+      &r申请白名单 $user
+
+      &c极光之恋QQ群号:&a773735730
+
+      &e[机器人24小时秒速审批]
+    # 白名单申请数量达到上限
+    max: '你的QQ号已经为 $user 申请了白名单，不可重复申请哦~'
+    # 成功移除白名单
+    remove_success: |-
+      成功移除白名单
+      QQ: $qq
+      ID: $ID
+    update_success: |-
+      成功更新白名单
+      QQ: $qq
+      ID: $ID

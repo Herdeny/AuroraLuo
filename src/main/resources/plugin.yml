@@ -1,0 +1,13 @@
+name: Xiaoluo
+version: '${project.version}'
+main: top.auroralove.xiaoluo.Plugin
+prefix: 极光小落
+loadbefore: [ PlaceholderAPI ]
+softdepend: [ PlaceholderAPI ]
+authors: [ Herdeny ]
+commands:
+  chat:
+    aliases:
+      - "qq"
+      - "xiaoluo"
+
