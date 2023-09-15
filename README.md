@@ -1,0 +1,2 @@
+# AuroraLuo
+基于Mirai框架的Minecraft群服互通机器人
